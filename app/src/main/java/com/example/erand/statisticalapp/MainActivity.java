@@ -27,8 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
+        pieChart.setRotationEnabled(true);
+        pieChart.setHoleRadius(25f);
+        pieChart.setTransparentCircleAlpha(0);
+        pieChart.setCenterText("Your Goal for this week");
+        pieChart.setCenterTextSize(10);
         pieChart.animateXY(5000, 5000);
         pieChart.invalidate();
+
     }
 
     private ArrayList getData() {
